@@ -51,11 +51,11 @@ def get_video_framerate(video_path):
   return int(video.get(cv2.CAP_PROP_FPS))
 
 def get_video_timecode(frames, fps):
-  frames = int(frames)
-  fps = int(fps)
   """
   Returns the time-code of a video in the format of HH:MM:SS:FF
   """
+  frames = int(frames)
+  fps = int(fps)
   return '{0:02d}:{1:02d}:{2:02d}:{3:02d}'.format(int(frames / (3600*fps)),
                                                   int(frames / (60*fps) % 60),
                                                   int(frames / fps % 60),
