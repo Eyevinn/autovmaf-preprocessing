@@ -1,6 +1,6 @@
 # AutoVMAF Preprocessing
 
-Python script that analyzes a video via a combination of motion and sharpness to determine the most suitable section to be used for VMAF analysis.
+Python script that analyzes a video (local file or hls-stream) via a combination of motion and sharpness to determine the most suitable section to be used for VMAF analysis.
 
 The output is a time-code of the frame that contains the most motion and finer details. This can for example be confetti, particles, tree leaves, etc.
 

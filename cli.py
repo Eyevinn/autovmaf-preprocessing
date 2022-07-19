@@ -5,11 +5,12 @@ from src.analyze import video_analyzer
 ap = argparse.ArgumentParser()
 ap.add_argument("-f", "--file", type=str, help="path to the video file")
 ap.add_argument("-d", "--debug", action='store_true', help="show debug video", default=False)
+ap.add_argument("-t", "--threshold", type=int, help="threshold for motion detection", default=4)
 args = vars(ap.parse_args())
 
 if not args["file"]:
     print("Please supply a video file '-f <path>'")
     exit()
 
-timecode = video_analyzer(args["file"], debug_video=args["debug"])
+timecode = video_analyzer(args["file"], args["threshold"], debug_video=args["debug"])
 print(timecode)
