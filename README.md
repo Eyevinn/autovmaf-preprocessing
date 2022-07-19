@@ -6,7 +6,7 @@ The output is a time-code of the frame that contains the most motion and finer d
 
 Example of a processed frame:
 The tool converts motion pixels to white and everything else to black pixels.
-The percentage of white pixels in the frame and the overall sharpness of the original frame (how much that is in focus) is then calculated per frame and then compared it to the next frame and so on.
+The percentage of white pixels in the frame and the overall sharpness of the original frame (how much that is in focus) is then calculated per frame and then compared to the next frame and so on.
 
 ## Usage
 
@@ -15,7 +15,7 @@ Example:
 ```python
 from .src.analyze import video_analyzer
 
-threshold = 4 # Motion threshold (higher = more motion required) (default: 4)
+threshold = 4 # Motion threshold (higher = more motion required) (default: 4 max: 255)
 timecode = video_analyzer(file_path="video.mp4", threshold=threshold)
 
 print(timecode) # HH:MM:SS:FF
