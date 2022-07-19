@@ -29,10 +29,10 @@ print(timecode) # HH:MM:SS:FF
 An example CLI have also been provided that prints the timecode to the console.
 
 ```bash
-python cli.py -f video.mp4
+python cli.py -f video.mp4 -t 4
 
 # To run the script with the debug option to show the processed frames:
-python cli.py -f video.mp4 -d
+python cli.py -f video.mp4 -t 4 -d
 ```
 
 ## About Eyevinn Technology
