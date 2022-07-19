@@ -19,12 +19,20 @@ threshold = 4 # Motion threshold (higher = more motion required) (default: 4 max
 timecode = video_analyzer(file_path="video.mp4", threshold=threshold)
 
 print(timecode) # HH:MM:SS:FF
+
+# To run the script with the debug option to show the processed frames:
+timecode = video_analyzer(file_path="video.mp4", threshold=threshold, debug_video=True)
+
+print(timecode) # HH:MM:SS:FF
 ```
 
 An example CLI have also been provided that prints the timecode to the console.
 
 ```bash
-python cli.py -f video.mp4 
+python cli.py -f video.mp4
+
+# To run the script with the debug option to show the processed frames:
+python cli.py -f video.mp4 -d
 ```
 
 ## About Eyevinn Technology
