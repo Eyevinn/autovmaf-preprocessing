@@ -28,6 +28,21 @@ print(timecode) # HH:MM:SS:FF
 
 An example CLI have also been provided that prints the timecode to the console.
 
+```text
+usage: cli.py [-h] [-f FILE] [-d] [-t THRESHOLD]
+
+required arguments:
+  -f FILE, --file FILE  path to the video file
+
+optional arguments:
+  -d, --debug           show the current processed frame
+  -t THRESHOLD, --threshold THRESHOLD
+                        threshold for motion detection, default: 4 max:
+                        255
+```
+
+Example:
+
 ```bash
 python cli.py -f video.mp4
 
