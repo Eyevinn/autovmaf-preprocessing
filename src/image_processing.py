@@ -4,8 +4,8 @@ import numpy as np
 
 def get_pixel_counts(img_rgb):
     """
-    Detects edges in an image, converts it to 
-    a black and white image and then counts the number of black/white pixels
+    Detects edges in an image, converts it to
+    a grayscale image and then counts the number of black/white pixels
     """
     image = cv2.cvtColor(img_rgb, cv2.COLOR_BGR2RGB)
     gray_img = cv2.cvtColor(image, cv2.COLOR_RGB2GRAY)
@@ -15,7 +15,7 @@ def get_pixel_counts(img_rgb):
 
 def motion_detector(curr_img_rgb, prev_img_rgb, threshold, debug_video):
     """
-    Detects motion in an image and returns the difference as a black and white frame 
+    Detects motion in an image and returns the difference as a black and white frame
     Difference is calculated by comparing the current frame with the previous frame
 
     The white pixels are the motion pixels
@@ -36,9 +36,9 @@ def motion_detector(curr_img_rgb, prev_img_rgb, threshold, debug_video):
     diff[diff > threshold] = 255
 
     if debug_video:
-        grey_rgb = cv2.cvtColor(diff, cv2.COLOR_GRAY2BGR)
-        debug_img = np.concatenate((curr_img_rgb, grey_rgb), axis=0)
-        cv2.imshow('debug', debug_img)
+        gray_rgb = cv2.cvtColor(diff, cv2.COLOR_GRAY2BGR)
+        debug_img = np.concatenate((curr_img_rgb, gray_rgb), axis=0)
+        cv2.imshow('AutoVMAF Preprocessing - debug', debug_img)
         cv2.waitKey(1)
 
     return get_number_of_pixels(img=diff)

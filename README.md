@@ -37,8 +37,7 @@ required arguments:
 optional arguments:
   -d, --debug           show the current processed frame
   -t THRESHOLD, --threshold THRESHOLD
-                        threshold for motion detection, default: 4 max:
-                        255
+                        threshold for motion detection, default: 4 max: 255
 ```
 
 Example:
