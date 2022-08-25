@@ -27,7 +27,7 @@ def motion_detector(curr_img_rgb, prev_img_rgb, threshold, debug_video):
     curr_frame = cv2.GaussianBlur(src=curr_frame, ksize=(3, 3), sigmaX=0)
 
     prev_frame = cv2.cvtColor(prev_img_rgb, cv2.COLOR_BGR2GRAY)
-    prev_frame = cv2.GaussianBlur(src=curr_frame, ksize=(3, 3), sigmaX=0)
+    prev_frame = cv2.GaussianBlur(src=prev_frame, ksize=(3, 3), sigmaX=0)
     diff_frame = cv2.absdiff(src1=prev_frame, src2=curr_frame)
 
     kernel = np.ones((2, 2))
