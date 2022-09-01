@@ -15,7 +15,7 @@ Example:
 ```python
 from .src.analyze import video_analyzer
 
-threshold = 4 # Motion threshold (higher = more motion required) (default: 4 max: 255)
+threshold = 4 # Motion threshold (higher = more motion required) (default: 25 max: 255)
 timecode = video_analyzer(file_path="video.mp4", threshold=threshold)
 
 print(timecode) # HH:MM:SS:FF
@@ -37,7 +37,7 @@ required arguments:
 optional arguments:
   -d, --debug           show the current processed frame
   -t THRESHOLD, --threshold THRESHOLD
-                        threshold for motion detection, default: 4 max: 255
+                        threshold for motion detection, default: 25 max: 255
 ```
 
 Example:

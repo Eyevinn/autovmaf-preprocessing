@@ -2,7 +2,7 @@ import cv2
 from .image_processing import get_pixel_counts, motion_detector, get_video_framerate, get_video_timecode
 
 
-def video_analyzer(file_path, threshold=4, debug_video=False):
+def video_analyzer(file_path, threshold=25, debug_video=False):
     """
     Analyzes a video and returns the timecode
     of the frame with the most motion/detail
