@@ -8,6 +8,13 @@ Example of a processed frame:
 The tool converts motion pixels to white and everything else to black pixels.
 The percentage of white pixels in the frame and the overall sharpness of the original frame (how much that is in focus) is then calculated per frame and then compared to the next frame and so on.
 
+## Installation
+
+The tool has a dependency on openCV for python, which should be installed using `pip` (or possibly `pip3` or similar): 
+
+`pip3 install opencv-python`
+
+
 ## Usage
 
 Example:
